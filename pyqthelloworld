@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+import os
+import sys
+if os.path.isdir(os.path.join(".","src")) and os.path.isfile(
+        os.path.join(".","setup.py")):
+    sys.path.append(os.path.realpath("src"))
+    sys.path.append(os.path.realpath("src/pyqthelloworld"))
+
+from pyqthelloworld.hello import HelloWindow
+
+if __name__ == '__main__':
+    HelloWindow()
