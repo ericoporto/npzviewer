@@ -22,6 +22,6 @@ parts:
 
   pyqthelloworld-copy:
     plugin: dump
-    source: ./snap/
+    source: .
     organize:
       pyqthelloworld-wrapper: bin/pyqthelloworld-wrapper
