@@ -1,0 +1,27 @@
+name: pyqthelloworld
+version: 0.1.0
+summary: pyqt hello world
+description: |
+ a pyqt5 python3 hello world test
+
+confinement: strict
+
+apps:
+  pyqthelloworld:
+    command: bin/pyqthelloworld-wrapper
+
+parts:
+  pyqthelloworld:
+    plugin: python3
+    source: git://github.com/ericoporto/pyqthelloworld
+    source-type: git
+    stage-packages:
+      - python3-pyqt5
+      - libc-bin
+      - locales
+
+  pyqthelloworld-copy:
+    plugin: dump
+    source: ./snap/
+    organize:
+      pyqthelloworld-wrapper: bin/pyqthelloworld-wrapper
