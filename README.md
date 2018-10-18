@@ -1,4 +1,6 @@
 # pyqthelloworld
+[![Build Status](https://travis-ci.com/ericoporto/pyqthelloworld.svg?branch=master)](https://travis-ci.com/ericoporto/pyqthelloworld)
+
 pyqt hello world!
 
 ## Why this?
