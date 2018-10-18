@@ -1,0 +1,5 @@
+sudo: required
+services:
+- docker
+script: docker run -v $(pwd):$(pwd) -w $(pwd) -t snapcore/snapcraft:stable sh -c
+  "apt update -qq && snapcraft"
