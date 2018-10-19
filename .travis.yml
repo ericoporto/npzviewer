@@ -1,5 +1,7 @@
 sudo: required
 services:
 - docker
-script: docker run -v $(pwd):$(pwd) -w $(pwd) -t snapcore/snapcraft:stable sh -c
-  "apt update -qq && mkdir -p ~/.config/snapcraft/ && printf \"[Sentry]\\nalways_send = true\" >> ~/.config/snapcraft/cli.cfg && snapcraft"
+script: |
+  docker run -v $(pwd):$(pwd) -w $(pwd) -t snapcore/snapcraft:stable sh -c
+  "apt update -qq && mkdir -p ~/.config/snapcraft/ && printf \"[Sentry]\\nalways_send = true\" >> ~/.config/snapcraft/cli.cfg && snapcraft && ls -la"
+  ls-la
