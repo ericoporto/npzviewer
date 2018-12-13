@@ -3,6 +3,8 @@
 
 A simple .npz file viewer, built with PyQt5
 
+![](screenshot.png)
+
 ## install 
 
 Just get it from pypi
