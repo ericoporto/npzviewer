@@ -52,9 +52,12 @@ class MainWindow(QtWidgets.QMainWindow):
         k_files.sort()
 
         self.plaintext.clear()
+        
+        self.plaintext.appendPlainText('keys are :' + str(npz_loaded_file.keys()))
+        self.plaintext.appendPlainText('--- *** ---')
 
         for k in k_files:
-          self.plaintext.appendPlainText(k +' :')
+          self.plaintext.appendPlainText(k + ' - shape: ' + str(npz_loaded_file[k].shape) + ' - :')
           self.plaintext.appendPlainText(str(npz_loaded_file[k]))
           self.plaintext.appendPlainText('---')
 
