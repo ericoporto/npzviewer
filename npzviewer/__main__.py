@@ -24,13 +24,11 @@ def main():
     2. if the arg is a .npz file, and no additional args, load the npzviewer and open the file.npz
     3. seeing the current version by using `--version`, and not opening the npzviewer
 
-    Additionally, I plan to enable expanding to being able to manipulate some files
-    and also opening directly a sub editor - like the palette editor.
     """
 
     parser = argparse.ArgumentParser(
                 prog=__title__,
-                description=__title__ + ' is a 2d RPG game maker.',
+                description=__title__ + ' is a .npz viewer, for numpy saved files.',
                 epilog=__copyright__ + ", " + __license__ +".")
     parser.add_argument('-v', '--version', action='store_true', default=False, help='get software version.')
     parser.add_argument('npzfile', nargs='?', default='no_npzfile', help='a single .npz file')

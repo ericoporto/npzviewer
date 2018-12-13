@@ -1,43 +1,22 @@
 # pyqthelloworld
-[![Build Status](https://travis-ci.com/ericoporto/pyqthelloworld.svg?branch=master)](https://travis-ci.com/ericoporto/pyqthelloworld)
+[![Build Status](https://travis-ci.com/ericoporto/npzviewer.svg?branch=master)](https://travis-ci.com/ericoporto/npzviewer)
 
-pyqt hello world!
+A simple .npz file viewer
 
-## Why this?
+## Usage
 
-I made so I could test building a snap from the [`snapcraft.yaml`](https://github.com/ericoporto/pyqthelloworld/blob/master/snap/snapcraft.yaml) below
+    usage: npzviewer [-h] [-v] [npzfile]
 
-    name: pyqthelloworld
-    version: 0.1.0
-    summary: pyqt hello world
-    description: |
-     a pyqt5 python3 hello world test
-    grade: devel # must be 'stable' to release into candidate/stable channels
-    confinement: strict # use 'strict' once you have the right plugs and slots
+    npzviewer is a .npz viewer, for numpy saved files.
 
-    apps:
-      pyqthelloworld:
-        command: desktop-launch $SNAP/bin/pyqthelloworld
-        plugs:
-        - desktop
-        - desktop-legacy
-        - unity7
-        - wayland
-        - x11
-        - opengl
+    positional arguments:
+      npzfile        a single .npz file
 
-    parts:
-      pyqthelloworld:
-        after: [desktop-qt5]
-        plugin: python
-        python-version: python3
-        source: git://github.com/ericoporto/pyqthelloworld
-        source-type: git
-        build-packages:
-          - python3
-          - python3-pyqt5
-        stage-packages:
-          - python3
-          - python3-pyqt5
-          - libc-bin
-          - locales
+    optional arguments:
+      -h, --help     show this help message and exit
+      -v, --version  get software version.
+
+    Copyright 2018 Erico Vieira Porto, GPLv2.
+
+
+
