@@ -8,7 +8,7 @@ confinement: strict # use 'strict' once you have the right plugs and slots
 
 apps:
   pyqthelloworld:
-    command: desktop-launch $SNAP/bin/pyqthelloworld
+    command: desktop-launch $SNAP/bin/npzviewer
     plugs:
     - desktop
     - desktop-legacy
@@ -22,17 +22,19 @@ parts:
     after: [desktop-qt5]
     plugin: python
     python-version: python3
-    source: git://github.com/ericoporto/pyqthelloworld
+    source: git://github.com/ericoporto/npzviewer
     source-type: git
     prepare: 
       - execstack --clear-execstack lib/python3.5/site-packages/PyQt5/Qt/lib/libQt5WebEngineCore.so.5
     build-packages:
       - python3
       - python3-pyqt5
+      - python3-numpy
       - execstack
     stage-packages:
       - python3
       - python3-pyqt5
+      - python3-numpy
       - libc-bin
       - locales
 
