@@ -1,13 +1,13 @@
-name: pyqthelloworld
+name: npzviewer
 version: 0.1.0
-summary: pyqt hello world
+summary: A simple .npz file viewer, built with PyQt5
 description: |
- a pyqt5 python3 hello world test
+ A simple .npz file viewer, built with PyQt5. Run with npzviewer.
 grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
 
 apps:
-  pyqthelloworld:
+  npzviewer:
     command: desktop-launch $SNAP/bin/npzviewer
     plugs:
     - desktop
@@ -18,7 +18,7 @@ apps:
     - opengl
 
 parts:
-  pyqthelloworld:
+  npzviewer:
     after: [desktop-qt5]
     plugin: python
     python-version: python3
