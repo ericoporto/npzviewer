@@ -26,9 +26,12 @@ def main():
 
     """
 
+    __title__ + " comes with ABSOLUTELY NO WARRANTY \nThis is free software, and you are welcome to redistribute it"
+
     parser = argparse.ArgumentParser(
                 prog=__title__,
-                description=__title__ + ' is a .npz viewer, for numpy saved files.',
+                description=__title__ + ' is a .npz viewer, for numpy saved files.' + "\n" +
+                   __title__ + " comes with ABSOLUTELY NO WARRANTY. \nThis is free software, and you are welcome to redistribute it." ,
                 epilog=__copyright__ + ", " + __license__ +".")
     parser.add_argument('-v', '--version', action='store_true', default=False, help='get software version.')
     parser.add_argument('npzfile', nargs='?', default='no_npzfile', help='a single .npz file')
