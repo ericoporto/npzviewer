@@ -1,5 +1,9 @@
 # npzviewer
-[![Build Status](https://travis-ci.com/ericoporto/npzviewer.svg?branch=master)](https://travis-ci.com/ericoporto/npzviewer)
+[![Build Status](https://travis-ci.com/ericoporto/npzviewer.svg?branch=master)](https://travis-ci.com/ericoporto/npzviewer) 
+[![](https://img.shields.io/github/license/ericoporto/npzviewer.svg)](https://github.com/ericoporto/npzviewer/blob/master/LICENSE)
+[![](https://img.shields.io/pypi/pyversions/npzviewer.svg)](https://pypi.org/project/npzviewer/)
+
+ 
 
 A simple .npz file viewer, built with PyQt5
 
