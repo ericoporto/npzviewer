@@ -1,4 +1,4 @@
-# pyqthelloworld
+# npzviewer
 [![Build Status](https://travis-ci.com/ericoporto/npzviewer.svg?branch=master)](https://travis-ci.com/ericoporto/npzviewer)
 
 A simple .npz file viewer
