@@ -11,7 +11,9 @@ Just use pip for installing
 
 
 Usage
------    
+-----
+
+npzviewer supports file dropping, opening from command line, and by clicking open on it's menu.
 
     usage: npzviewer [-h] [-v] [npzfile]
 
@@ -24,7 +26,7 @@ Usage
       -h, --help     show this help message and exit
       -v, --version  get software version.
 
-    Copyright 2018 Erico Vieira Porto, GPLv2.
+    Copyright 2019 Erico Vieira Porto, GPLv2.
 
 
 Recommended Install and Run
