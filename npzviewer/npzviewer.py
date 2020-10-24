@@ -50,9 +50,9 @@ class MainWindow(QtWidgets.QMainWindow):
         layout.addLayout(hlayout)
         layout.addWidget(self.plaintext)
         self.setAcceptDrops(True)
-        self.opemFileIfDropped(filelist)
-
+        
         vlayout = QtWidgets.QVBoxLayout()
+        
         self.keysCombo = QtWidgets.QComboBox(self)
         self.indexSpin = QtWidgets.QSpinBox(self)
         self.indexSpin.setSingleStep(1)
@@ -61,9 +61,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self.indexSpin.setVisible(False)
         self.matTable = QtWidgets.QTableWidget(self)
 
-        self.selected_nparr = np.array([])
+        self.opemFileIfDropped(filelist)
 
-        self.npz_loaded_file = ""
+        self.selected_nparr = np.array([])
 
         vlayout.addWidget(self.keysCombo)
         vlayout.addWidget(self.indexSpin)
@@ -149,7 +149,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.keysCombo.currentTextChanged.disconnect()
 
         self.keysCombo.clear()
-        self.keysCombo.addItems(list(self.npz_loaded_file.keys()))
+        self.npz_keys = list(self.npz_loaded_file.keys())
+        self.keysCombo.addItems(self.npz_keys)
 
         self.keysCombo.currentTextChanged.connect(self.comboKeyChanged)
 
@@ -163,6 +164,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def opemFileIfDropped(self, filelist):
         if (isinstance(filelist, str)):
             if (".npz" in filelist):
+                print(filelist)
                 self.openFileByName(filelist)
 
         else:
